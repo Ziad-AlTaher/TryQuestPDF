@@ -1,0 +1,304 @@
+﻿@model InvoiceModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="@Url.Content("~/css/style.css")" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        .a4-page {
+            width: 210mm;
+            margin: auto;
+            padding: 20mm; /* Adjust padding as needed */
+            box-sizing: border-box;
+            border: 1px solid #000; /* Optional: for visual reference */
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .pl-3 {
+            padding-left: 12px;
+        }
+
+        .pr-3 {
+            padding-right: 12px;
+        }
+
+        .pl-2 {
+            padding-left: 8px;
+        }
+
+        .pr-2 {
+            padding-right: 8px;
+        }
+
+        .pr-4 {
+            padding-right: 16px;
+        }
+
+        .pl-4 {
+            padding-left: 16px;
+        }
+
+        .py-3 {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        .border-main {
+            border-color: #000;
+        }
+
+        .font-bold {
+            font-weight: bold;
+        }
+
+        .text-main {
+            color: #000;
+        }
+
+        .bg-main {
+            background-color: #000;
+        }
+
+        .text-slate-400 {
+            color: #94a3b8;
+        }
+
+        .text-slate-300 {
+            color: #cbd5e1;
+        }
+
+        .text-neutral-600 {
+            color: #4b5563;
+        }
+
+        .text-neutral-700 {
+            color: #374151;
+        }
+
+        .whitespace-nowrap {
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a4-page">
+        <div class="py-4">
+            <div class="px-14 py-6">
+                <table class="w-full border-collapse border-spacing-0">
+                    <tbody>
+                        <tr>
+                            <td class="w-full align-top">
+                                <div>
+                                    <img src="@Url.Content("~/images/xqzq2the7s6rdxtwrujejrkqknb03hajna81hcdj.png")" />
+                                </div>
+                                <div>
+                                    <p class="font-bold">مؤسسة صن شيلد للتجاره</p>
+                                    <p>الرقم الضريبي : 302120617800003</p>
+                                </div>
+                            </td>
+
+                            <td class="align-top">
+                                <div class="text-sm">
+                                    <table class="border-collapse border-spacing-0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="border-r pl-4 p-">
+                                                    <div>
+                                                        <p class="whitespace-nowrap text-slate-400 text-left">التاريخ</p>
+                                                        <p class="whitespace-nowrap font-bold text-main text-left">April 26, 2023</p>
+                                                    </div>
+                                                </td>
+                                                <td class="pr-4">
+                                                    <div>
+                                                        <p class="whitespace-nowrap text-slate-400 text-left">Invoice #</p>
+                                                        <p class="whitespace-nowrap font-bold text-main text-left">BRA-00335</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="border-r pl-4 p-">
+                                                    <div>
+                                                        <p class="whitespace-nowrap text-slate-400 text-left"></p>
+                                                        <p class="whitespace-nowrap font-bold text-main text-left"></p>
+                                                    </div>
+                                                </td>
+                                                <td class="pr-4">
+                                                    <div>
+                                                        <p class="whitespace-nowrap text-slate-400 text-left">الموظف المسؤول</p>
+                                                        <p class="whitespace-nowrap font-bold text-main text-left">زياد الطاهر</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bg-slate-100 px-14 py-6 text-sm">
+                <table class="w-full border-collapse border-spacing-0">
+                    <tbody>
+                        <tr>
+                            <td class="w-1/2 align-top">
+                                <div class="text-sm text-neutral-600">
+                                    <p class="font-bold">بيانات السياره</p>
+                                    <p>نوع السياره: لكزس ال اكس 600</p>
+                                    <p>رقم اللوحه: ص ق ر 5684</p>
+                                </div>
+                            </td>
+                            <td class="w-1/2 align-top text-left">
+                                <div class="text-sm text-neutral-600">
+                                    <p class="font-bold">بيانات العميل</p>
+                                    <p>اسم العميل : عاطف محمد</p>
+                                    <p>رقم الجوال : +201141309185</p>
+
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2 class="pt-9 font-bold" style="text-align: center;">اتفاقية عمل</h2>
+
+            <div class="px-14 py-10 text-sm text-neutral-700">
+                <table class="w-full border-collapse border-spacing-0">
+                    <thead>
+                        <tr>
+                            <td class="border-b-2 border-main pb-3 pr-3 font-bold text-main">الخدمه</td>
+                            <td class="border-b-2 border-main pb-3 pr-2 font-bold text-main">القيمه</td>
+                            @* <td class="border-b-2 border-main pb-3 pr-2 text-left font-bold text-main">السعر</td>
+                            <td class="border-b-2 border-main pb-3 pr-2 text-center font-bold text-main">الكمية</td>
+                            <td class="border-b-2 border-main pb-3 pr-2 text-center font-bold text-main">الضريبة</td>
+                            <td class="border-b-2 border-main pb-3 pr-2 text-left font-bold text-main">الإجمالي</td>
+                            <td class="border-b-2 border-main pb-3 pr-2 pl-3 text-left font-bold text-main">الإجمالي + الضريبة</td> *@
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border-b py-3 pr-3">حماية صدام سياره</td>
+                            <td class="border-b py-3 pr-2">1700.00</td>
+                            @* <td class="border-b py-3 pr-2 text-left">$150.00</td>
+                            <td class="border-b py-3 pr-2 text-center">1</td>
+                            <td class="border-b py-3 pr-2 text-center">20%</td>
+                            <td class="border-b py-3 pr-2 text-left">$150.00</td>
+                            <td class="border-b py-3 pr-2 pl-3 text-left">$180.00</td> *@
+                        </tr>
+
+                        <tr>
+                            <td colspan="7">
+                                <table class="w-full border-collapse border-spacing-0">
+                                    <tbody>
+                                        <tr>
+                                            <td class="w-full"></td>
+                                            <td>
+                                                <table class="w-full border-collapse border-spacing-0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="border-b p-3">
+                                                                <div class="whitespace-nowrap text-slate-400">الاجمالي قبل الضريبه:</div>
+                                                            </td>
+                                                            <td class="border-b p-3 text-left">
+                                                                <div class="whitespace-nowrap font-bold text-main">$1700.00</div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="p-3">
+                                                                <div class="whitespace-nowrap text-slate-400">ضريبة القيمه المضافه:</div>
+                                                            </td>
+                                                            <td class="p-3 text-left">
+                                                                <div class="whitespace-nowrap font-bold text-main">$60.00</div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="bg-main p-3">
+                                                                <div class="whitespace-nowrap font-bold text-white">الإجمالي بعد الضريبه:</div>
+                                                            </td>
+                                                            <td class="bg-main p-3 text-left">
+                                                                <div class="whitespace-nowrap font-bold text-white">$1760.00</div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="px-14 text-sm text-neutral-700">
+                <p class="">التوقيع يعني الموافقه على البنود الخلفيه |<br /> Signing means the agreement to the back terms</p>
+                <br />
+                <p class="text-main font-bold">اسم العميل : </p>
+            </div>
+
+            
+
+
+
+        </div>
+
+    </div>
+    <footer class="fixed bottom-0 right-0 bg-slate-100 w-full text-neutral-600 text-center text-xs py-3">
+        <span class="font-bold text-black">SunShieldKsa</span>
+        <span class="text-slate-300 px-2">|</span>
+        <a href="mailto:info@company.com" class="text-neutral-600">
+            <i class="fas fa-envelope"></i> info@SunShieldKsa.com
+        </a>
+        <span class="text-slate-300 px-2">|</span>
+        <a href="" class="text-neutral-600">
+            <i class="fas fa-phone"></i> +966 59 281 8286
+        </a>
+        <span class="text-slate-300 px-2">|</span>
+        <a href="https://www.companywebsite.com" class="text-neutral-600">
+            <i class="fas fa-globe"></i> www.SunShieldKsa.com
+        </a>
+        <span class="text-slate-300 px-2">|</span>
+        <a href="https://www.facebook.com/company" class="text-neutral-600">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.twitter.com/company" class="text-neutral-600 px-2">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/company" class="text-neutral-600">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <div class="mt-2" style="border-top: 1px solid #d1d5db; padding-top: 10px;">
+            <div style="display: flex; justify-content: space-between;">
+                <div style="text-align: right;padding-right : 170px">
+                    <div><i class="fas fa-map-marker-alt"></i> فرع الرياض: <a href="tel:+966112345678" class="text-neutral-600">+966 11 234 5678</a></div>
+                    <div><i class="fas fa-map-marker-alt"></i> فرع جدة: <a href="tel:+966122345678" class="text-neutral-600">+966 12 234 5678</a></div>
+                </div>
+                <div style="text-align: left;padding-left : 170px">
+                    <div><i class="fas fa-map-marker-alt"></i> فرع الدمام: <a href="tel:+966132345678" class="text-neutral-600">+966 13 234 5678</a></div>
+                    <div><i class="fas fa-map-marker-alt"></i> فرع مكة: <a href="tel:+966142345678" class="text-neutral-600">+966 14 234 5678</a></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
